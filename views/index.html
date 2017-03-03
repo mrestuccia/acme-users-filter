@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>Acme Users</title>
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Acme Users Filter</h1>
+      <form method='POST' action='/regenerate'>
+      <button class='btn btn-danger' href='/regenerate'>Regenerate Users</button>
+      </form>
+      <div class='row'>
+        <div class='col-sm-8'>
+          <ul class='nav nav-tabs'>
+  
+    <li
+      
+      >
+      <a href='/users/filter/B'>B (9)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/C'>C (4)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/D'>D (6)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/E'>E (2)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/F'>F (8)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/G'>G (7)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/H'>H (5)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/J'>J (3)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/K'>K (6)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/L'>L (6)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/M'>M (4)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/N'>N (2)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/O'>O (5)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/P'>P (3)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/R'>R (11)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/S'>S (7)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/T'>T (1)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/V'>V (1)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/W'>W (9)</a>
+    </li>
+  
+    <li
+      
+      >
+      <a href='/users/filter/Y'>Y (1)</a>
+    </li>
+  
+  <li
+      
+    >
+    <a href='/'>
+      All
+    </a>
+</ul>
+
+          <table class='table'>
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Location</th>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+
+        </div>
+        <div class='col-sm-4'>
+          <h2>Instructions</h2>
+<pre>
+  name repo acme-users-filter
+  db/
+    _conn.js - 2 lines
+    User.js - ~35 lines
+      -- use class methods to keep routes small
+    index.js ~55 lines
+      sync
+      seed
+      models: { User }
+  server.js ~20 lines
+
+  routes.js ~25 lines
+    GET /
+    GET /users/filter/:letter
+    POST /regenerate
+
+  views/index.html
+    _users.html ~20 lines
+    _filter.html ~20 lines
+</pre>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
