@@ -1,0 +1,8 @@
+<ul class='nav nav-tabs'>
+  {% for key in map %}
+    <li><a href='/users/filter/{{key}}'>{{key}} ({{map[key]}})</a></li>
+  {% endfor %}
+  <li><a href='/'>All</a>
+</ul>
+
+------
