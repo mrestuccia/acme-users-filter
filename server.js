@@ -3,7 +3,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
 
-// Coded Modules
+// Modules
 const db = require('./db');
 
 // Init Express
@@ -23,12 +23,11 @@ const routes = require('./routes');
 // Call the route file
 app.use('/', routes);
 
+// Sync and start listening
 db.sync()
-  .then(() => {
-    console.log('db synched');
-
-    // Start listening
+  .then(()=> {
+    db.seed()
     let port = process.env.port || 3000;
-    app.listen(port, () => console.log(`listening on port ${port}`));
+    app.listen(port, () => console.log(`listening on port ${port}`)); 
   })
-  .catch((err) => console.log(`We have an issue ${err}`));
+  .catch(err=>console.log(err));
