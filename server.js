@@ -23,11 +23,13 @@ const routes = require('./routes');
 // Call the route file
 app.use('/', routes);
 
-// Sync and start listening
+// Sync
 db.sync()
   .then(() => {
     db.seed()
-    let port = process.env.port || 3000;
-    app.listen(port, () => console.log(`listening on port ${port}`));
   })
   .catch(err => console.log(err));
+
+// Start listening
+let port = process.env.port || 3000;
+app.listen(port, () => console.log(`listening on port ${port}`));
