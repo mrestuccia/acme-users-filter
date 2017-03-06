@@ -10,6 +10,9 @@
   "keywords": ["express", "postgres", "sequelize"],
   "author": "Mauro Restuccia",
   "license": "MIT",
+  "engines": {
+    "node": "6.9.2"
+  },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "express": "^4.15.0",
