@@ -1,6 +1,14 @@
 <ul class='nav nav-tabs'>
   {% for key, value in map %}
-    <li><a href='/users/filter/{{key}}'>{{key}} ({{value}})</a></li>
+    <li
+    {% if letter == key %}
+      class='active'
+    {% endif %}
+    ><a href='/users/filter/{{key}}'>{{key}} ({{value}})</a></li>
   {% endfor %}
-  <li><a href='/'>All</a>
+  <li
+   {% if letter == "" %}
+      class='active'    
+   {% endif %}
+  ><a href='/'>All</a>
 </ul>

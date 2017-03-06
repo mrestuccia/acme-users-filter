@@ -25,9 +25,9 @@ app.use('/', routes);
 
 // Sync and start listening
 db.sync()
-  .then(()=> {
+  .then(() => {
     db.seed()
     let port = process.env.port || 3000;
-    app.listen(port, () => console.log(`listening on port ${port}`)); 
+    app.listen(port, () => console.log(`listening on port ${port}`));
   })
-  .catch(err=>console.log(err));
+  .catch(err => console.log(err));

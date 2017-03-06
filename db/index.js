@@ -1,6 +1,5 @@
 const faker = require('faker/locale/en_US');
 
-
 const _conn = require('./_conn');
 const User = require('./User');
 
@@ -11,12 +10,11 @@ const seed = () => {
     let first = faker.name.firstName();
     let last = faker.name.lastName();
     let email = faker.internet.email();
-    let rest = faker.helpers.contextualCard();
+    let location = faker.helpers.userCard().address.geo;
 
-    //Push the creation of the data
-    promise.push(User.create({ first: first, last: last, email: email, location: [1, 2] }));
+    // Push the creation of the data
+    promise.push(User.create({ first: first, last: last, email: email, location: [location.lat, location.lng] }));
   }
-
   return Promise.all(promise)
 }
 

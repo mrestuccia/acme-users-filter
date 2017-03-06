@@ -1,16 +1,15 @@
 {
   "name": "acme-users-filter",
   "version": "1.0.0",
-  "description": "",
-  "main": "routes.js",
+  "description": "Basic Filtering functions",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start:dev": "DATABASE_URL=postgres://localhost/acme_filter nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["express", "postgres", "sequelize"],
+  "author": "Mauro Restuccia",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "express": "^4.15.0",

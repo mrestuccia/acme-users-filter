@@ -1,7 +1,13 @@
 <html>
   <head>
     <title>Acme Users</title>
-    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+    <link href='/vendor/bootstrap/dist/css/bootstrap.css' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <style>
+      body{
+        font-family: 'Lora', serif;
+      }
+    </style>
   </head>
   <body>
     <div class='container'>
@@ -10,36 +16,9 @@
       <button class='btn btn-danger' href='/regenerate'>Regenerate Users</button>
       </form>
       <div class='row'>
-        <div class='col-sm-8'>
-            {% include "_filter.html" %}
-          
+        <div class='col-sm-12'>
+            {% include "_filter.html" %}   
             {% include "_users.html" %}
-
-        </div>
-        <div class='col-sm-4'>
-          <h2>Instructions</h2>
-<pre>
-  name repo acme-users-filter
-  db/
-    _conn.js - 2 lines
-    User.js - ~35 lines
-      -- use class methods to keep routes small
-    index.js ~55 lines
-      sync
-      seed
-      models: { User }
-  server.js ~20 lines
-
-  routes.js ~25 lines
-    GET /
-    GET /users/filter/:letter
-    POST /regenerate
-
-  views/index.html
-    _users.html ~20 lines
-    _filter.html ~20 lines
-</pre>
-
         </div>
       </div>
     </div>
